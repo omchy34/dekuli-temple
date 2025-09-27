@@ -1,9 +1,11 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
+    "start": "node --experimental-json-modules src/index.js",
+    "build": "npm install --only=production",
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "author": "",
@@ -21,7 +23,9 @@
     "multer": "^2.0.2",
     "cloudinary": "^1.41.0",
     "multer-storage-cloudinary": "^4.0.0",
-    "nodemon": "^3.1.3",
     "router": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
   }
 }
