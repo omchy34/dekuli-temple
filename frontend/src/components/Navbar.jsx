@@ -59,7 +59,7 @@ function Navbar() {
             </div>
             <div className="flex flex-col">
               <div className="text-xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
-                बाबा बर्द्धबनेश्वर नाथ
+                Baba Bardhbaneshwar Nath
               </div>
               <div className="text-xs text-red-300/80 -mt-1 hidden sm:block">
                 🕉 Sacred Temple 🕉
