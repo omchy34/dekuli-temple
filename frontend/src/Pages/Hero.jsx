@@ -53,14 +53,14 @@ function Hero() {
         </div>
 
         <div className="animate-fade-in">
- <h1
-  className="text-4xl md:text-6xl font-extrabold 
+<h1
+  className="text-2xl md:text-4xl font-extrabold 
              bg-gradient-to-r from-violet-400 via-pink-500 to-yellow-400 
              bg-clip-text text-transparent 
              drop-shadow-[0_0_25px_rgba(180,80,255,0.7)] 
              mb-6 animate-pulse tracking-wide text-center"
 >
-  बाबा बर्द्धबनेश्वर नाथ
+  Baba Bardhbaneshwar Nath
 </h1>
 
 

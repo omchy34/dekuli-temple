@@ -16,7 +16,7 @@ function Contact() {
             <FaMapMarkerAlt className="text-3xl sm:text-4xl text-orange-400 mx-auto mb-3 sm:mb-4" />
             <h3 className="text-lg sm:text-xl font-semibold text-slate-200 mb-2 sm:mb-3">Address</h3>
             <p className="text-sm sm:text-base text-slate-300">
-             Baba Vardhmaneshwar Nath Mahadev Temple, Dekuli, darbhanga
+             Baba Vardhmaneshwar Nath Mahadev Mandir, Dekuli, darbhanga
             </p>
           </div>
           
