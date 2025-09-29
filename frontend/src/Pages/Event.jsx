@@ -1,6 +1,6 @@
 // Event Component
 import React,{useEffect,useState} from "react";
-import {Calendar,Loader} from "lucide-react"
+import {Calendar,Loader,Eye,Download} from "lucide-react"
 import api from "../utils/AxiosInstance.js"
 
 const Event = () => {

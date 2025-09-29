@@ -24,14 +24,20 @@ const imageStorage = new CloudinaryStorage({
   },
 });
 
-// Cloudinary storage for documents (PDFs)
+// Cloudinary storage for documents (PDFs) - PROPER PDF UPLOAD
 const documentStorage = new CloudinaryStorage({
   cloudinary: cloudinary,
-  params: {
-    folder: "documents",
-    resource_type: "raw", // For non-image files like PDFs
-    allowed_formats: ["pdf"]
-  },
+  params: (req, file) => {
+    return {
+      folder: "documents",
+      resource_type: "raw", // Keep as raw for PDFs
+      allowed_formats: ["pdf"],
+      use_filename: true,
+      unique_filename: false,
+      // CRITICAL: Add .pdf extension to public_id for proper recognition
+      public_id: file.originalname.replace(/\.[^/.]+$/, "") + ".pdf"
+    };
+  }
 });
 
 // Export configured cloudinary instance for direct use if needed
