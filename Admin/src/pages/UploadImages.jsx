@@ -174,31 +174,30 @@ export function UploadImages() {
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {images.map((image) => (
-              <div key={image._id} className="relative group">
+              <div key={image._id} className="relative">
                 <img
                   src={image.imgUrl}
                   alt="Gallery"
                   className="w-full h-32 object-cover rounded-lg border border-gray-600"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-200 rounded-lg flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex gap-2">
-                    <a
-                      href={image.imgUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700"
-                      title="View full size"
-                    >
-                      <Eye className="w-4 h-4" />
-                    </a>
-                    <button
-                      onClick={() => deleteImage(image._id)}
-                      className="bg-red-600 text-white p-2 rounded-full hover:bg-red-700"
-                      title="Delete image"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
-                  </div>
+                {/* Buttons visible on mobile, hover effect on desktop */}
+                <div className="absolute top-2 right-2 flex gap-2 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-200">
+                  <a
+                    href={image.imgUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 shadow-lg"
+                    title="View full size"
+                  >
+                    <Eye className="w-4 h-4" />
+                  </a>
+                  <button
+                    onClick={() => deleteImage(image._id)}
+                    className="bg-red-600 text-white p-2 rounded-full hover:bg-red-700 shadow-lg"
+                    title="Delete image"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
                 </div>
                 <p className="text-xs text-gray-500 mt-1 text-center">
                   {new Date(image.createdAt).toLocaleDateString()}
