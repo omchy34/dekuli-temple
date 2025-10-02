@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Calendar, FileText, Loader, Eye, Download } from "lucide-react";
 import api from '../utils/AxiosInstance';
+import { Helmet } from "react-helmet";  // ⬅️ SEO ke liye add
 
 // Darshan Component
 const Darshan = () => {
@@ -27,6 +28,8 @@ const Darshan = () => {
   if (loading) {
     return (
       <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-12 px-6">
+       
+
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-yellow-400">
             आज का दर्शन 🙏
@@ -45,6 +48,7 @@ const Darshan = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-12 px-6">
+    
       {/* Heading */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-yellow-400">
@@ -104,4 +108,4 @@ const Darshan = () => {
   );
 };
 
-export default Darshan
+export default Darshan;

@@ -1,7 +1,7 @@
-// Event Component
-import React,{useEffect,useState} from "react";
-import {Calendar,Loader,Eye,Download} from "lucide-react"
-import api from "../utils/AxiosInstance.js"
+import React, { useEffect, useState } from "react";
+import { Calendar, Loader, Eye, Download } from "lucide-react";
+import api from "../utils/AxiosInstance.js";
+import { Helmet } from "react-helmet"; // ⬅️ SEO ke liye add
 
 const Event = () => {
   const [events, setEvents] = useState([]);
@@ -35,6 +35,8 @@ const Event = () => {
   if (loading) {
     return (
       <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-12 px-6">
+    
+
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-xl font-bold text-yellow-400">
             Events & Documentation 📜
@@ -53,6 +55,8 @@ const Event = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-12 px-6">
+      
+
       {/* Heading */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-yellow-400">
@@ -128,4 +132,4 @@ const Event = () => {
   );
 };
 
-export default Event
+export default Event;

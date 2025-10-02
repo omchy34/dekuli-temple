@@ -1,8 +1,11 @@
 import { FaOm } from "react-icons/fa";
+import { Helmet } from "react-helmet"; 
 
 function About() {
   return (
     <section className="py-20 bg-gradient-to-b from-slate-900 to-purple-900">
+     
+
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent mb-6">
@@ -10,7 +13,7 @@ function About() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-amber-400 mx-auto"></div>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-slate-300 text-lg leading-relaxed">
@@ -42,7 +45,7 @@ function About() {
               </button>
             </div>
           </div>
-          
+
           <div className="relative">
             <div className="w-full h-80 bg-gradient-to-br from-orange-400/20 to-amber-400/20 rounded-3xl backdrop-blur-sm border border-orange-400/30 flex items-center justify-center">
               <img

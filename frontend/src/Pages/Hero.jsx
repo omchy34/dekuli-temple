@@ -1,10 +1,14 @@
 import { FaOm } from "react-icons/fa";
 import { GiTrident } from "react-icons/gi";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";   // ⬅️ SEO ke liye add
 
 function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
+   
+     
+
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -17,7 +21,7 @@ function Hero() {
       {/* Red-Blue Overlay with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-800/70 via-slate-800/65 to-gray-900/75"></div>
 
-      {/* Decorative elements with red colors */}
+      {/* Decorative elements */}
       <div className="absolute inset-0 opacity-15">
         <div className="absolute top-20 left-20 text-5xl text-red-400 animate-pulse">ॐ</div>
         <div className="absolute bottom-32 right-16 text-4xl text-red-300 animate-pulse delay-1000">🕉</div>
@@ -31,7 +35,7 @@ function Hero() {
         <div className="absolute top-40 right-1/4 text-3xl text-red-400 animate-pulse delay-300">🔱</div>
       </div>
 
-      {/* Floating particles effect with red colors */}
+      {/* Floating particles */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <div
@@ -41,7 +45,7 @@ function Hero() {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`
+              animationDuration: `${3 + Math.random() * 2}s`,
             }}
           ></div>
         ))}
@@ -50,40 +54,45 @@ function Hero() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-screen text-center px-4">
         <div className="mb-6">
-          <FaOm className="text-6xl text-red-400 mx-auto animate-spin" style={{ animationDuration: '20s' }} />
+          <FaOm
+            className="text-6xl text-red-400 mx-auto animate-spin"
+            style={{ animationDuration: "20s" }}
+          />
         </div>
 
         <div className="animate-fade-in">
-<h1
-  className="text-2xl md:text-4xl font-extrabold 
+          <h1
+            className="text-2xl md:text-4xl font-extrabold 
              bg-gradient-to-r from-violet-400 via-pink-500 to-yellow-400 
              bg-clip-text text-transparent 
              drop-shadow-[0_0_25px_rgba(180,80,255,0.7)] 
              mb-6 animate-pulse tracking-wide text-center"
->
-  Baba Bardhbaneshwar Nath
-</h1>
+          >
+            Baba Bardhbaneshwar Nath
+          </h1>
 
+          <h2 className="text-2xl md:text-3xl font-semibold text-slate-200 drop-shadow-xl mb-3">
+            ॥ ॐ नमः शिवाय ॥  
+          </h2>
 
-
-
-  <h2 className="text-2xl md:text-3xl font-semibold text-slate-200 drop-shadow-xl mb-3">
-    ॥ ॐ नमः शिवाय ॥  
-  </h2>
-
-  <p className="mt-4 text-slate-300 text-lg md:text-xl drop-shadow-md max-w-2xl leading-relaxed">
-    Welcome to the sacred abode of Lord Shiva. <br />  
-    A divine place of faith, devotion, and blessings — where every chant of <span className="text-red-400 font-bold">“Har Har Mahadev”</span>  
-    resonates with eternal peace and spiritual energy.  
-  </p>
-</div>
-
+          <p className="mt-4 text-slate-300 text-lg md:text-xl drop-shadow-md max-w-2xl leading-relaxed">
+            Welcome to the sacred abode of Lord Shiva. <br />  
+            A divine place of faith, devotion, and blessings — where every chant of <span className="text-red-400 font-bold">“Har Har Mahadev”</span>  
+            resonates with eternal peace and spiritual energy.  
+          </p>
+        </div>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <Link to="/about" className="px-6 py-3 bg-gradient-to-r from-red-500 via-pink-500 to-red-600 text-white font-bold text-base rounded-full shadow-2xl hover:from-red-400 hover:via-pink-400 hover:to-red-500 transition-all duration-300 transform hover:scale-105 hover:shadow-red-400/50">
+          <Link
+            to="/about"
+            className="px-6 py-3 bg-gradient-to-r from-red-500 via-pink-500 to-red-600 text-white font-bold text-base rounded-full shadow-2xl hover:from-red-400 hover:via-pink-400 hover:to-red-500 transition-all duration-300 transform hover:scale-105 hover:shadow-red-400/50"
+          >
             About Us
           </Link>
-          <Link to="/darshan" className="px-6 py-3 border-2 border-red-400 text-red-400 font-bold text-base rounded-full shadow-xl hover:bg-red-400 hover:text-white transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+          <Link
+            to="/darshan"
+            className="px-6 py-3 border-2 border-red-400 text-red-400 font-bold text-base rounded-full shadow-xl hover:bg-red-400 hover:text-white transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+          >
             View Gallery
           </Link>
         </div>
