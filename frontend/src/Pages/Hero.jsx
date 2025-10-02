@@ -1,5 +1,6 @@
 import { FaOm } from "react-icons/fa";
 import { GiTrident } from "react-icons/gi";
+import {Link} from "react-router-dom";
 
 function Hero() {
   return (
@@ -79,12 +80,12 @@ function Hero() {
 
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <button className="px-6 py-3 bg-gradient-to-r from-red-500 via-pink-500 to-red-600 text-white font-bold text-base rounded-full shadow-2xl hover:from-red-400 hover:via-pink-400 hover:to-red-500 transition-all duration-300 transform hover:scale-105 hover:shadow-red-400/50">
+          <Link to="/about" className="px-6 py-3 bg-gradient-to-r from-red-500 via-pink-500 to-red-600 text-white font-bold text-base rounded-full shadow-2xl hover:from-red-400 hover:via-pink-400 hover:to-red-500 transition-all duration-300 transform hover:scale-105 hover:shadow-red-400/50">
             About Us
-          </button>
-          <button className="px-6 py-3 border-2 border-red-400 text-red-400 font-bold text-base rounded-full shadow-xl hover:bg-red-400 hover:text-white transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+          </Link>
+          <Link to="/darshan" className="px-6 py-3 border-2 border-red-400 text-red-400 font-bold text-base rounded-full shadow-xl hover:bg-red-400 hover:text-white transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
             View Gallery
-          </button>
+          </Link>
         </div>
       </div>
 
